@@ -24,7 +24,7 @@ Favorite machine learning algorithms: GBM, NNs.
 
 Tools: XGBoost, Vowpal Wabbit, LibFM, scikit-learn.
 
-Local CV vs leaderboard fit: 
+CV: compromise between local CV score vs leaderboard results: 
 
 ```python
 ((LocalCVscore*number_rows_trainset) + (LBscore*number_of_rows_used_to_calculate_LB)) / (sum_of_number_of_rows_in_CV_and_LB )
@@ -35,7 +35,35 @@ Secret sauce: models and features, CV, teaming up, ensembles, hard work and luck
 
 ### [Interview with a Kaggle Grandmaster - bestfitting](https://medium.com/kaggle-blog/profiling-top-kagglers-bestfitting-currently-1-in-the-world-58cc0e187b)
 
-TODO
+As of May-2018.
+
+Iteration cycle:
+1. Create a solution document, follow and update as the competition continues on.
+1. Read the overview and data description of the competition carefully
+1. Find similar Kaggle competitions. As a relatively new comer, I have collected and done a basic analysis of all Kaggle competitions.
+1. Read solutions of similar competitions.
+1. Read papers to make sure I don’t miss any progress in the field.
+1. Analyze the data and build a stable CV.
+1. Data pre-processing, feature engineering, model training.
+1. Result analysis such as prediction distribution, error analysis, hard examples.
+1. Elaborate models or design a new model based on the analysis.
+1. Based on data analysis and result analysis, design models to add diversities or solve hard samples.
+1. Return to a former step if necessary.
+
+Favorite machine learning algorithms: ridge regression when ensemble, resnet-50 for DL.
+
+Tools: PyTorch, seaborn, XGBoost.
+
+CV: check and make sure the validation set has similar distribution to the training set and test set.
+
+Secret sauce: CV, learning from other competitions, papers, hard work, "solution doc".
+
+On solution doc: "I force myself to make a list that includes the challenges we faced, 
+the solutions and papers I should read, possible risks, possible CV 
+strategies, possible data augmentations, and the way to add model diversities. 
+And I keep updating the document."
+
+
 
 ### [Interview with a Kaggle Grandmaster - KazAnova](https://medium.com/kaggle-blog/profiling-top-kagglers-kazanova-currently-2-in-the-world-f3fa9f936810)
 
