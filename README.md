@@ -64,10 +64,32 @@ strategies, possible data augmentations, and the way to add model diversities.
 And I keep updating the document."
 
 
-
 ### [Interview with a Kaggle Grandmaster - KazAnova](https://medium.com/kaggle-blog/profiling-top-kagglers-kazanova-currently-2-in-the-world-f3fa9f936810)
 
-TODO
+As of May-2015.
+
+Iteration cycle:
+1. Understand the importance of different algorithmic families, to see when and where to maximize the intensity (is it a linear or non-linear type of problem?). Sacrifice a couple of submissions in the beginning of the contest to understand the importance of the different algorithms.
+1. Select a model and do a recursive loop with the following steps:
+	- Transform data (scaling, log(x+1) values, treat missing values, PCA or none);
+	- Optimize hyper parameters of the model;
+	- Do feature engineering for that model (as in generate new features);
+	- Do features’ selection for that model (as in reducing them);
+	- Redo previous steps as optimum parameters are likely to have changed slightly;
+	- Save hold-out predictions to be used later (meta-modelling);
+	- Check consistency of CV scores with leaderboard. If problematic, 
+	re-assess cross-validation process and re-do steps.
+1. Team up.
+1. Find a good way to ensemble.
+
+Favorite machine learning algorithms: GBDT.
+
+CV: validation set should resemble test, 
+for final submission - best LB submission and best CV submission.
+
+Secret sauce: multiple ensemble meta-stacking (eg. StackNet),
+understanding the problem well, hard work.
+
 
 ### [Andrew Ng - Career Advice & Reading Research Papers](https://youtu.be/733m6qBH-jI)
 
